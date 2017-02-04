@@ -16,11 +16,13 @@ class PhotoViewController: UIViewController {
 
 	private var backgroundImage: UIImage
 	private var peopleTableView: UITableView!
+	private var viewModel: FaceViewModel!
 
 	init(image: UIImage) {
+		let imageData = UIImagePNGRepresentation(image)
 		self.backgroundImage = image
 		super.init(nibName: nil, bundle: nil)
-		// make image request
+		viewModel = FaceViewModel(persons: [], imageData: imageData, delegate: self)
 	}
 
 	required init?(coder aDecoder: NSCoder) {
@@ -73,4 +75,10 @@ extension PhotoViewController: UITableViewDataSource {
 
 extension PhotoViewController: UITableViewDelegate {
 	// touch events
+}
+
+extension PhotoViewController: FaceModelDelegate {
+	func responseReturned() {
+		// stuff here
+	}
 }

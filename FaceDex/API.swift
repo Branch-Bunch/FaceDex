@@ -12,9 +12,7 @@ import Alamofire
 struct API {
 	static let baseURL = "http://http://face-dex.herokuapp.com"
 	
-	static func enrollFace(image: UIImage, name: String) {
-		guard let imageData = UIImagePNGRepresentation(image) else { return print("UIImage -> NSData failed") }
-		
+	static func enrollFace(imageData: Data, name: String) {
 		let params: Parameters = [
 			"name": name,
 			"image": imageData.base64EncodedString()
@@ -25,7 +23,13 @@ struct API {
 		}
 	}
 	
-	static func recognizeFace(image: UIImage) {
-		
+	static func recognizeFace(imageData: Data) {
+			let params: Parameters = [
+				"image": imageData.base64EncodedString()
+			]
+
+			Alamofire.request("\(baseURL)/enroll", method: .post, parameters: params).responseJSON { res in
+				print(res.data ?? "no work")
+			}
 	}
 }
