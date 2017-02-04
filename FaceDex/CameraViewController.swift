@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CameraViewController.swift
 //  FaceDex
 //
 //  Created by Benjamin Emdon on 2017-02-04.
@@ -9,7 +9,7 @@
 import UIKit
 import SwiftyCam
 
-class ViewController: SwiftyCamViewController, SwiftyCamViewControllerDelegate {
+class CameraViewController: SwiftyCamViewController, SwiftyCamViewControllerDelegate {
 
 	var flipCameraButton: UIButton!
 	var flashButton: UIButton!

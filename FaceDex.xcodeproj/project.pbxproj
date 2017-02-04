@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1416FAEC1E462A2200A84993 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1416FAEB1E462A2200A84993 /* API.swift */; };
 		1D332BC41E45B49A0017DA48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D332BC31E45B49A0017DA48 /* AppDelegate.swift */; };
-		1D332BC61E45B49A0017DA48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D332BC51E45B49A0017DA48 /* ViewController.swift */; };
+		1D332BC61E45B49A0017DA48 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D332BC51E45B49A0017DA48 /* CameraViewController.swift */; };
 		1D332BCB1E45B49A0017DA48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D332BCA1E45B49A0017DA48 /* Assets.xcassets */; };
 		1D332BCE1E45B49A0017DA48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D332BCC1E45B49A0017DA48 /* LaunchScreen.storyboard */; };
 		1D332BD61E461FEA0017DA48 /* SwiftyRecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D332BD51E461FEA0017DA48 /* SwiftyRecordButton.swift */; };
@@ -24,7 +24,7 @@
 		1416FAEB1E462A2200A84993 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		1D332BC01E45B49A0017DA48 /* FaceDex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceDex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D332BC31E45B49A0017DA48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1D332BC51E45B49A0017DA48 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1D332BC51E45B49A0017DA48 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		1D332BCA1E45B49A0017DA48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D332BCD1E45B49A0017DA48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D332BCF1E45B49A0017DA48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -73,7 +73,7 @@
 			children = (
 				1D332BC31E45B49A0017DA48 /* AppDelegate.swift */,
 				1416FAEB1E462A2200A84993 /* API.swift */,
-				1D332BC51E45B49A0017DA48 /* ViewController.swift */,
+				1D332BC51E45B49A0017DA48 /* CameraViewController.swift */,
 				1D332BD51E461FEA0017DA48 /* SwiftyRecordButton.swift */,
 				1D332BD71E4620CB0017DA48 /* PhotoViewController.swift */,
 				1DFD07881E4638B800218D71 /* FaceViewModel.swift */,
@@ -228,7 +228,7 @@
 			files = (
 				1D332BDA1E462AD00017DA48 /* Person.swift in Sources */,
 				1DFD07861E462E9D00218D71 /* PersonResponse.swift in Sources */,
-				1D332BC61E45B49A0017DA48 /* ViewController.swift in Sources */,
+				1D332BC61E45B49A0017DA48 /* CameraViewController.swift in Sources */,
 				1D332BD81E4620CB0017DA48 /* PhotoViewController.swift in Sources */,
 				1DFD07891E4638B800218D71 /* FaceViewModel.swift in Sources */,
 				1D332BD61E461FEA0017DA48 /* SwiftyRecordButton.swift in Sources */,
