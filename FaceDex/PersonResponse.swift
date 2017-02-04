@@ -12,7 +12,7 @@ import Curry
 
 struct PersonResponse {
 	let success: Bool
-	let persons: [Person]?
+	let persons: [Person]
 	let error: String?
 }
 
@@ -20,7 +20,7 @@ extension PersonResponse: Decodable {
 	static func decode(_ json: JSON) -> Decoded<PersonResponse> {
 		return curry(self.init)
 		<^> json <| "sccuess"
-		<*> json <||? "persons"
+		<*> json <|| "persons"
 		<*> json <|? "error"
 	}
 }

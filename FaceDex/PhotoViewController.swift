@@ -22,7 +22,7 @@ class PhotoViewController: UIViewController {
 		let imageData = UIImagePNGRepresentation(image)
 		self.backgroundImage = image
 		super.init(nibName: nil, bundle: nil)
-		viewModel = FaceViewModel(persons: [], imageData: imageData, delegate: self)
+		viewModel = FaceViewModel(imageData: imageData)
 	}
 
 	required init?(coder aDecoder: NSCoder) {
@@ -78,7 +78,15 @@ extension PhotoViewController: UITableViewDelegate {
 }
 
 extension PhotoViewController: FaceModelDelegate {
-	func responseReturned() {
+	func enrollResponse() {
 		// stuff here
+	}
+	
+	func recognizeResponse() {
+		// stuff here
+	}
+	
+	func errorResponse() {
+		// moar stuff
 	}
 }
