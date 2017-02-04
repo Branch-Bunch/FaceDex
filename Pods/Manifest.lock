@@ -1,15 +1,24 @@
 PODS:
   - Alamofire (4.3.0)
+  - Argo (4.1.1):
+    - Runes (>= 4.0.0)
+  - Curry (3.0.0)
+  - Runes (4.0.1)
   - SwiftyCam (2.1.0)
 
 DEPENDENCIES:
   - Alamofire
+  - Argo
+  - Curry
   - SwiftyCam
 
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
+  Argo: 014ac072f97462bc1a9b83d302edb351488a532f
+  Curry: eb3d2c75aec678b3cc7fb2729d2ad6dd121531d1
+  Runes: ff20f163b478ac2c0e18158d6086fd5b1997f983
   SwiftyCam: 2f13473f67afa4658bff79453d7db6890e2fa84d
 
-PODFILE CHECKSUM: 39fd4156d8a63a168de36baa1eee20d839ee03f9
+PODFILE CHECKSUM: 01a3814a1b2f56b4b780b69676bedec67c9e8a22
 
 COCOAPODS: 1.2.0

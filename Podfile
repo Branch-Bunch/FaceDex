@@ -8,4 +8,6 @@ target 'FaceDex' do
   # Pods for FaceDex
   pod "SwiftyCam"
   pod "Alamofire"
+  pod "Argo"
+  pod "Curry"
 end
