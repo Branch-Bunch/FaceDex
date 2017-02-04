@@ -1,5 +1,5 @@
 //
-//  PersonResponse.swift
+//  RecognizeResponse.swift
 //  FaceDex
 //
 //  Created by Benjamin Emdon on 2017-02-04.
