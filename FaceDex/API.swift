@@ -6,30 +6,17 @@
 //  Copyright © 2017 Benjamin Emdon. All rights reserved.
 //
 
-import UIKit
 import Alamofire
+import Argo
 
-struct API {
-	static let baseURL = "http://http://face-dex.herokuapp.com"
-	
-	static func enrollFace(imageData: Data, name: String) {
-		let params: Parameters = [
-			"name": name,
-			"image": imageData.base64EncodedString()
-		]
-		
-		Alamofire.request("\(baseURL)/enroll", method: .post, parameters: params).responseJSON { res in
-			print(res.data ?? "no work")
-		}
-	}
-	
-	static func recognizeFace(imageData: Data) {
-			let params: Parameters = [
-				"image": imageData.base64EncodedString()
-			]
+struct Links {
+	static let baseURL = "https://https://face-dex.herokuapp.com"
+}
 
-			Alamofire.request("\(baseURL)/enroll", method: .post, parameters: params).responseJSON { res in
-				print(res.data ?? "no work")
-			}
+public enum API: String {
+	case enroll = "/enroll"
+	case recognize = "/recognize"
+	var url: String {
+		return Links.baseURL + self.rawValue
 	}
 }
