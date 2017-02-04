@@ -1,5 +1,5 @@
 //
-//  PhotoViewController.swift
+//  PeopleViewController.swift
 //  FaceDex
 //
 //  Created by Benjamin Emdon on 2017-02-04.
@@ -8,15 +8,15 @@
 
 import UIKit
 
-class PhotoViewController: UIViewController {
+class PeopleViewController: UIViewController {
 
 	override var prefersStatusBarHidden: Bool {
 		return true
 	}
 
 	private var backgroundImage: UIImage
-	private var peopleTableView: UITableView!
-	private var viewModel: FaceViewModel!
+	fileprivate var peopleTableView: UITableView!
+	fileprivate var viewModel: FaceViewModel!
 
 	init(image: UIImage) {
 		let imageData = UIImagePNGRepresentation(image)
@@ -35,51 +35,59 @@ class PhotoViewController: UIViewController {
 
 		let backgroundImageView = UIImageView(frame: view.frame)
 		backgroundImageView.image = backgroundImage
-		view.addSubview(backgroundImageView)
+
 
 		let cancelButton = UIButton(frame: CGRect(x: 10.0, y: 10.0, width: 30.0, height: 30.0))
 		cancelButton.setImage(#imageLiteral(resourceName: "cancel"), for: UIControlState())
 		cancelButton.addTarget(self, action: #selector(cancel), for: .touchUpInside)
-		view.addSubview(cancelButton)
 
-		let width = view.bounds.width
-		let height = view.bounds.height
-		peopleTableView = UITableView(frame: CGRect(x: 0, y: height - 120, width: width, height: 120))
+
+		peopleTableView = UITableView(frame: view.bounds)
+		peopleTableView.backgroundColor = .clear
+		peopleTableView.contentInset = UIEdgeInsets(top: view.bounds.height - 64, left: 0, bottom: 0, right: 0)
+		peopleTableView.rowHeight = 64
+		peopleTableView.separatorStyle = .none
 		peopleTableView.delegate = self
 		peopleTableView.dataSource = self
-		peopleTableView.register(UITableViewCell.self, forCellReuseIdentifier: String(describing: UITableViewCell.self))
+		peopleTableView.register(ClearCell.self, forCellReuseIdentifier: String(describing: ClearCell.self))
+
+		view.addSubview(backgroundImageView)
 		view.addSubview(peopleTableView)
+		view.addSubview(cancelButton)
+
+		viewModel.recognize()
 	}
 
 	func cancel() {
 		dismiss(animated: true, completion: nil)
 	}
-
-	func show(whoThisIs persons: [Person]) {
-		// do stuff here
-	}
 }
 
-extension PhotoViewController: UITableViewDataSource {
+extension PeopleViewController: UITableViewDataSource {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return 3
+		return viewModel.persons.count + 1 // extra 1 for question cell
 	}
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: UITableViewCell.self))!
-		cell.textLabel?.text = "\(indexPath.row)"
+		let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ClearCell.self)) as! ClearCell
+		if indexPath.row == viewModel.persons.count {
+			cell.title = "This the droid you were looking for?"
+		} else {
+			cell.title = viewModel.persons[indexPath.row].name
+		}
+		cell.render()
 		return cell
 	}
 }
 
 
-extension PhotoViewController: UITableViewDelegate {
+extension PeopleViewController: UITableViewDelegate {
 	// touch events
 }
 
-extension PhotoViewController: FaceModelDelegate {
-	func enrollResponse() {
-		// stuff here
+extension PeopleViewController: FaceModelDelegate {
+	func responseReturned() {
+		peopleTableView.reloadData()
 	}
 	
 	func recognizeResponse() {

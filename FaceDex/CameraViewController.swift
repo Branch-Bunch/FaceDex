@@ -31,7 +31,7 @@ class CameraViewController: SwiftyCamViewController, SwiftyCamViewControllerDele
 	}
 
 	func swiftyCam(_ swiftyCam: SwiftyCamViewController, didTake photo: UIImage) {
-		let newVC = PhotoViewController(image: photo)
+		let newVC = PeopleViewController(image: photo)
 		self.present(newVC, animated: true, completion: nil)
 	}
 
@@ -52,11 +52,6 @@ class CameraViewController: SwiftyCamViewController, SwiftyCamViewControllerDele
 			self.flipCameraButton.alpha = 1.0
 		})
 	}
-
-//	func swiftyCam(_ swiftyCam: SwiftyCamViewController, didFinishProcessVideoAt url: URL) {
-//		let newVC = VideoViewController(videoURL: url)
-//		self.present(newVC, animated: true, completion: nil)
-//	}
 
 	func swiftyCam(_ swiftyCam: SwiftyCamViewController, didFocusAtPoint point: CGPoint) {
 		let focusView = UIImageView(image: #imageLiteral(resourceName: "focus"))
