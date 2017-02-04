@@ -10,16 +10,16 @@ import Argo
 import Runes
 import Curry
 
-struct PersonResponse {
+struct RecognizeResponse {
 	let success: Bool
 	let persons: [Person]
 	let error: String?
 }
 
-extension PersonResponse: Decodable {
-	static func decode(_ json: JSON) -> Decoded<PersonResponse> {
+extension RecognizeResponse: Decodable {
+	static func decode(_ json: JSON) -> Decoded<RecognizeResponse> {
 		return curry(self.init)
-		<^> json <| "sccuess"
+		<^> json <| "success"
 		<*> json <|| "persons"
 		<*> json <|? "error"
 	}

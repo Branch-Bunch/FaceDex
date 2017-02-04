@@ -44,7 +44,7 @@ class FaceViewModel {
 		
 		Alamofire.request(API.recognize.url, method: .post, parameters: params).responseJSON { response in
 			debugPrint(response.result)
-			if let value = response.result.value, let personResponse: PersonResponse = decode(value) {
+			if let value = response.result.value, let personResponse: RecognizeResponse = decode(value) {
 				self.persons = personResponse.persons
 			}
 		}
