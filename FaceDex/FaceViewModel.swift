@@ -8,7 +8,17 @@
 
 import Foundation
 
+protocol FaceModelDelegate: class {
+	func responseReturned()
+}
+
 struct FaceViewModel {
 	var persons: [Person]
-	var imageData: Data
+	var imageData: Data?
+	weak var delegate: FaceModelDelegate?
+
+	func recognize() {
+		API.recognizeFace(imageData: self.imageData!)
+		// do delegate message
+	}
 }
