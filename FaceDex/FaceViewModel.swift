@@ -24,7 +24,8 @@ class FaceViewModel {
 		self.imageData = imageData
 	}
 
-	func enrollFace(imageData: Data, name: String) {
+	func enrollFace(name: String) {
+		guard let imageData = imageData else { return }
 		let params: Parameters = [
 			"name": name,
 			"image": imageData.base64EncodedString()
@@ -35,7 +36,8 @@ class FaceViewModel {
 		}
 	}
 	
-	func recognizeFace(imageData: Data) {
+	func recognizeFace() {
+		guard let imageData = imageData else { return }
 		let params: Parameters = [
 			"image": imageData.base64EncodedString()
 		]

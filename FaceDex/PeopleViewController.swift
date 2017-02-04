@@ -55,7 +55,7 @@ class PeopleViewController: UIViewController {
 		view.addSubview(peopleTableView)
 		view.addSubview(cancelButton)
 
-		viewModel.recognize()
+		viewModel.recognizeFace()
 	}
 
 	func cancel() {
@@ -86,15 +86,12 @@ extension PeopleViewController: UITableViewDelegate {
 }
 
 extension PeopleViewController: FaceModelDelegate {
-	func responseReturned() {
+	func enrollResponse() {}
+
+	func recognizeResponse() {
 		peopleTableView.reloadData()
 	}
-	
-	func recognizeResponse() {
-		// stuff here
-	}
-	
-	func errorResponse() {
-		// moar stuff
-	}
+
+	func errorResponse() {}
+
 }
