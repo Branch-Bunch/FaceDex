@@ -10,7 +10,7 @@ import Alamofire
 import Argo
 
 struct Links {
-	static let baseURL = "https://https://face-dex.herokuapp.com"
+	static let baseURL = "https://face-dex.herokuapp.com"
 }
 
 public enum API: String {
