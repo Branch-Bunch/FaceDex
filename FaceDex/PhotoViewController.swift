@@ -41,4 +41,6 @@ class PhotoViewController: UIViewController {
 	func cancel() {
 		dismiss(animated: true, completion: nil)
 	}
+
+	
 }

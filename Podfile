@@ -7,5 +7,5 @@ target 'FaceDex' do
 
   # Pods for FaceDex
   pod "SwiftyCam"
-
+  pod "Alamofire"
 end

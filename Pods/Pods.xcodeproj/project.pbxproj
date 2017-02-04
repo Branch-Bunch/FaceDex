@@ -7,96 +7,134 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		251D50EB3DD3D6076FB3470A129021E6 /* SwiftyCamButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E29E40F6235AC4CFA8CF4A2109ADF7C /* SwiftyCamButton.swift */; };
-		3F92C77D2E28980335CA9610ED134953 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		51BC03656F2CC68E67021D9DC0DE2569 /* SwiftyCamViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CD94B353A3FC408FD1DDA00ED95410 /* SwiftyCamViewControllerDelegate.swift */; };
-		5B55AC4B61F815956B3A5BD5D830715A /* SwiftyCam-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F260082CD9E9D6306D7F71482C3CE01 /* SwiftyCam-dummy.m */; };
-		61DD973DA21762E4D337E200D5B2CEAD /* Pods-FaceDex-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BC5E636A4F4ABB354A0C0167BC3A654 /* Pods-FaceDex-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7C95118FA6F4FCB0120C43DECE663978 /* Pods-FaceDex-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B13938D070C90BEFBEA76F44384C77F5 /* Pods-FaceDex-dummy.m */; };
-		821FD2B752A2EF4D6EE6F9E3B41D1DF0 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F787EEDE14A5EFCDCC911F70F08534F /* PreviewView.swift */; };
-		A75D0206B83BCCB6C13656EBB9DF9F2A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		D02392398D033B9E1CE06371B14FAF53 /* SwiftyCamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1142CBED6622372D315746E5D725B1E /* SwiftyCamViewController.swift */; };
-		EC376B834A37422175E1F08BAE54B5CF /* SwiftyCam-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6480079F16B172BC91863C932BE8D2F7 /* SwiftyCam-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		02C41B6DCFE91A17809A9EE256D72B9B /* SwiftyCamViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC159A704A87B56B2DD23C7244FC8BB /* SwiftyCamViewControllerDelegate.swift */; };
+		0AEDED047528ABE5F1F2F61421EC3FA7 /* SwiftyCamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA4E3D830F06A92B78AE0345E6270BD /* SwiftyCamViewController.swift */; };
+		0C3DABEABC00FB4ACBAFF3DAE0348537 /* SwiftyCam-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8C1D10BB063A876339207AD71A3EFF /* SwiftyCam-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4EBF3DB507BCCDE3D65F26F31B11E5 /* Timeline.swift */; };
+		1B1A2E971379E69841314EC677941A7E /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641CD6DE1070CC68D3401DE0EDD61832 /* PreviewView.swift */; };
+		1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 06E240C89A27EE13CE30B69B9C8C7425 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3626B94094672CB1C9DEA32B9F9502E1 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7F6AB450454BD3918398AC74E1701F /* TaskDelegate.swift */; };
+		5387216E723A3C68E851CA15573CDD71 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD5FAB2A37AE1E4F55E47646A17293A /* Request.swift */; };
+		61200D01A1855D7920CEF835C8BE00B0 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715408C9C7EEBA2682F360237CFC8F15 /* DispatchQueue+Alamofire.swift */; };
+		62F65AD8DC4F0F9610F4B8B4738EC094 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AB14D970926CF4E30A21D811764F5D /* ServerTrustPolicy.swift */; };
+		685A592147632D26015DEAB7030D5347 /* Pods-FaceDex-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B13938D070C90BEFBEA76F44384C77F5 /* Pods-FaceDex-dummy.m */; };
+		7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CBD233CCE112B9B85EBC4EA847A4EF /* SessionDelegate.swift */; };
+		7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = B526A2A5C57B05F8E55C8920E71DC482 /* Result.swift */; };
+		8F403682A8B4B55FD4D5869D955D7898 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		92F8A13907AD9FD866C29C22EE953C7C /* SwiftyCamButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83D430F7E1BB31EB0B34B5BB64C277F /* SwiftyCamButton.swift */; };
+		9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C905F9FEBBE9A7689D108532756852BC /* AFError.swift */; };
+		A04BFC558D69E7DBB68023C80A9CFE4E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		A2A6F71B727312BD45CC7A4AAD7B0AB7 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3E2A22412D650C349C0FB509099024 /* NetworkReachabilityManager.swift */; };
+		A9EEEA7477981DEEBC72432DE9990A4B /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CDA5DBBBF8BAC7014BACA78DB851E09 /* Alamofire-dummy.m */; };
+		AE1EF48399533730D0066E04B22CA2D6 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EEB169430E1518DA0FCBFFE9869B4E /* SessionManager.swift */; };
+		B65FCF589DA398C3EFE0128064E510EC /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D912FFA7030D935B55F397B9CF8B82BC /* MultipartFormData.swift */; };
+		B6E09C122BA4419E8141084A38B4FCB3 /* SwiftyCam-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 717043310290273978DC1B974AC5535B /* SwiftyCam-dummy.m */; };
+		BBEFE2F9CEB73DC7BD97FFA66A0D9D4F /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089E8E20F97CDBD576544CDC01EDA4B6 /* Validation.swift */; };
+		BE5C67A07E289FE1F9BE27335B159997 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D84632D2C074397B984D001CD865F1C /* ParameterEncoding.swift */; };
+		CB6D60925223897FFA2662667DF83E8A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102AA90E9C858CB6F375198FC745F503 /* Response.swift */; };
+		D8D1934A116F843986EA49684FA605FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		DB6606C837506820A91054704FD7E060 /* Pods-FaceDex-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BC5E636A4F4ABB354A0C0167BC3A654 /* Pods-FaceDex-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71C0EF6DC7360C7FC70AF3225C72B88 /* Notifications.swift */; };
+		F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AF9D6C89FCF3023F0B0D79A90B5225 /* ResponseSerialization.swift */; };
+		F8B3D3092ED0417E8CDF32033F6122F5 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0427B09D21D940BA1714B3287C092ECF /* Alamofire.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		8524443F74236B1DFFC91E5EF77C7548 /* PBXContainerItemProxy */ = {
+		9A5D7CEF98B32F07741CA7FAA9E0D813 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = ACD282A935A7A47D0BBAF0011506AA97;
+			remoteGlobalIDString = 88E9EC28B8B46C3631E6B242B50F4442;
+			remoteInfo = Alamofire;
+		};
+		E4F50CB5BC0607B29BFB20D62A2E365B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 707D50F23D0F6D5AD09EC2BD895CC58F;
 			remoteInfo = SwiftyCam;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0090A8347EA5C71659F22C66CF7BED9F /* Pods-FaceDex-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FaceDex-acknowledgements.plist"; sourceTree = "<group>"; };
+		0427B09D21D940BA1714B3287C092ECF /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		06E240C89A27EE13CE30B69B9C8C7425 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		089E8E20F97CDBD576544CDC01EDA4B6 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		102AA90E9C858CB6F375198FC745F503 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
 		1408D5B0BC71EF6D2FF8C51B647D4CDF /* Pods-FaceDex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FaceDex.release.xcconfig"; sourceTree = "<group>"; };
+		169B5161C3DFD3009818C3706DCFFA46 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		173682BA533E48ED61F655D0D769CA14 /* Pods-FaceDex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FaceDex.debug.xcconfig"; sourceTree = "<group>"; };
-		1E4C6B361B8B571E0992FF2489EF2ABA /* Pods_FaceDex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FaceDex.framework; path = "Pods-FaceDex.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BD5FAB2A37AE1E4F55E47646A17293A /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		1CFC8822257EBD8FE535D7405C2441AE /* Pods_FaceDex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FaceDex.framework; path = "Pods-FaceDex.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F7F6AB450454BD3918398AC74E1701F /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
 		2BC5E636A4F4ABB354A0C0167BC3A654 /* Pods-FaceDex-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FaceDex-umbrella.h"; sourceTree = "<group>"; };
-		3F260082CD9E9D6306D7F71482C3CE01 /* SwiftyCam-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyCam-dummy.m"; sourceTree = "<group>"; };
+		3CDA5DBBBF8BAC7014BACA78DB851E09 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
 		4193657A32F386C198FD3476FD488CC8 /* Pods-FaceDex.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-FaceDex.modulemap"; sourceTree = "<group>"; };
-		4A11E64F959EAA086856E03B6D50FB92 /* SwiftyCam.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyCam.xcconfig; sourceTree = "<group>"; };
-		6480079F16B172BC91863C932BE8D2F7 /* SwiftyCam-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyCam-umbrella.h"; sourceTree = "<group>"; };
+		46AF9D6C89FCF3023F0B0D79A90B5225 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		4C9F0D806274C79A2BA7CF4D855F622B /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		50CBD233CCE112B9B85EBC4EA847A4EF /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
+		58DA326716AB67CB35103BFA4BA8F818 /* SwiftyCam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyCam.framework; path = SwiftyCam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BA4E3D830F06A92B78AE0345E6270BD /* SwiftyCamViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyCamViewController.swift; path = Source/SwiftyCamViewController.swift; sourceTree = "<group>"; };
+		641CD6DE1070CC68D3401DE0EDD61832 /* PreviewView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PreviewView.swift; path = Source/PreviewView.swift; sourceTree = "<group>"; };
+		6FEEC7E28869B26A5A4A1EBA7F48BC66 /* SwiftyCam.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftyCam.modulemap; sourceTree = "<group>"; };
+		715408C9C7EEBA2682F360237CFC8F15 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
+		717043310290273978DC1B974AC5535B /* SwiftyCam-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyCam-dummy.m"; sourceTree = "<group>"; };
 		78B998272CBC822077C8326F07F918E2 /* Pods-FaceDex-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FaceDex-resources.sh"; sourceTree = "<group>"; };
-		7B1A3F4DB5FBFABAF5C70AF5B6B0D04C /* SwiftyCam.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftyCam.modulemap; sourceTree = "<group>"; };
-		7E29E40F6235AC4CFA8CF4A2109ADF7C /* SwiftyCamButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyCamButton.swift; path = Source/SwiftyCamButton.swift; sourceTree = "<group>"; };
-		8A580282FE8C6ACB0CF326D55341D67B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8F787EEDE14A5EFCDCC911F70F08534F /* PreviewView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PreviewView.swift; path = Source/PreviewView.swift; sourceTree = "<group>"; };
+		7D84632D2C074397B984D001CD865F1C /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
+		840858AD8C72808251E6570F2D1A1633 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		8D4EBF3DB507BCCDE3D65F26F31B11E5 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
+		8E94E06B04409FCC5ED40ACA19C0A78A /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
+		92AB14D970926CF4E30A21D811764F5D /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		99CD94B353A3FC408FD1DDA00ED95410 /* SwiftyCamViewControllerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyCamViewControllerDelegate.swift; path = Source/SwiftyCamViewControllerDelegate.swift; sourceTree = "<group>"; };
-		B1142CBED6622372D315746E5D725B1E /* SwiftyCamViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyCamViewController.swift; path = Source/SwiftyCamViewController.swift; sourceTree = "<group>"; };
+		9685A90014B4E079B3204424692DCE6A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98FBEAC161C4A86AB8F72E334F5628C2 /* SwiftyCam.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyCam.xcconfig; sourceTree = "<group>"; };
+		A0EEB169430E1518DA0FCBFFE9869B4E /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
 		B13938D070C90BEFBEA76F44384C77F5 /* Pods-FaceDex-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FaceDex-dummy.m"; sourceTree = "<group>"; };
-		B2CE3DC3C379CA2D649EF17291B506A6 /* SwiftyCam-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyCam-prefix.pch"; sourceTree = "<group>"; };
+		B526A2A5C57B05F8E55C8920E71DC482 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
+		B5FCC18ABA5C28DC70FB26A602F6BDBF /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBE41620C6C243E22901B658FDEAB6DB /* Pods-FaceDex-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FaceDex-acknowledgements.markdown"; sourceTree = "<group>"; };
-		BC3E031EDB5978F03219CBA02144915C /* SwiftyCam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyCam.framework; path = SwiftyCam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD8C1D10BB063A876339207AD71A3EFF /* SwiftyCam-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyCam-umbrella.h"; sourceTree = "<group>"; };
+		BDC159A704A87B56B2DD23C7244FC8BB /* SwiftyCamViewControllerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyCamViewControllerDelegate.swift; path = Source/SwiftyCamViewControllerDelegate.swift; sourceTree = "<group>"; };
+		C71C0EF6DC7360C7FC70AF3225C72B88 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
+		C83D430F7E1BB31EB0B34B5BB64C277F /* SwiftyCamButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyCamButton.swift; path = Source/SwiftyCamButton.swift; sourceTree = "<group>"; };
+		C905F9FEBBE9A7689D108532756852BC /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
 		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CC3E2A22412D650C349C0FB509099024 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		D912FFA7030D935B55F397B9CF8B82BC /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
 		DAB9582BA56C7D8FF5BE3FC9491E50F9 /* Pods-FaceDex-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FaceDex-frameworks.sh"; sourceTree = "<group>"; };
 		ED8147E1DAE44C69D12446B9B02AE0AC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F17CBD260BB09597827E64F9451EC64D /* SwiftyCam-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyCam-prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		076A0B509CFC497B466EA840E8FA8A22 /* Frameworks */ = {
+		77F7305FA11849688593B0ADF885B477 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F92C77D2E28980335CA9610ED134953 /* Foundation.framework in Frameworks */,
+				D8D1934A116F843986EA49684FA605FA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4875327BC1F8442BBF7D2965F336BADA /* Frameworks */ = {
+		99195E4207764744AEC07ECCBCD550EB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A75D0206B83BCCB6C13656EBB9DF9F2A /* Foundation.framework in Frameworks */,
+				A04BFC558D69E7DBB68023C80A9CFE4E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB7C9FD207D73AE160C9E079A6E09DA1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F403682A8B4B55FD4D5869D955D7898 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0AAB137789309075370324EFADEA4FFD /* SwiftyCam */ = {
-			isa = PBXGroup;
-			children = (
-				8F787EEDE14A5EFCDCC911F70F08534F /* PreviewView.swift */,
-				7E29E40F6235AC4CFA8CF4A2109ADF7C /* SwiftyCamButton.swift */,
-				B1142CBED6622372D315746E5D725B1E /* SwiftyCamViewController.swift */,
-				99CD94B353A3FC408FD1DDA00ED95410 /* SwiftyCamViewControllerDelegate.swift */,
-				83574DFCF9BBF7F96E7560A429B5EF23 /* Support Files */,
-			);
-			name = SwiftyCam;
-			path = SwiftyCam;
-			sourceTree = "<group>";
-		};
-		0B908D219F50293D5D6C12BD5B2B02E5 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				0AAB137789309075370324EFADEA4FFD /* SwiftyCam */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		0EBCCEA5DBF5FBBAB7AA793D236755A4 /* Pods-FaceDex */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,29 +161,79 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		790977735E8AE00FB566B636E9D8B97F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4C9F0D806274C79A2BA7CF4D855F622B /* Alamofire.modulemap */,
+				8E94E06B04409FCC5ED40ACA19C0A78A /* Alamofire.xcconfig */,
+				3CDA5DBBBF8BAC7014BACA78DB851E09 /* Alamofire-dummy.m */,
+				840858AD8C72808251E6570F2D1A1633 /* Alamofire-prefix.pch */,
+				06E240C89A27EE13CE30B69B9C8C7425 /* Alamofire-umbrella.h */,
+				9685A90014B4E079B3204424692DCE6A /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Alamofire";
+			sourceTree = "<group>";
+		};
+		7C7FC689CC34031BCC7DFC3A000ED972 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B5FCC18ABA5C28DC70FB26A602F6BDBF /* Alamofire.framework */,
+				1CFC8822257EBD8FE535D7405C2441AE /* Pods_FaceDex.framework */,
+				58DA326716AB67CB35103BFA4BA8F818 /* SwiftyCam.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				0B908D219F50293D5D6C12BD5B2B02E5 /* Pods */,
-				BE5F2F84AA22A40C2347DE7689A284A9 /* Products */,
+				C80E07EB489FA864536FAB66D4747C68 /* Pods */,
+				7C7FC689CC34031BCC7DFC3A000ED972 /* Products */,
 				D184836B30030DC07221D55AF31808DA /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		83574DFCF9BBF7F96E7560A429B5EF23 /* Support Files */ = {
+		9B2FB17B846641B9383F8329D88D0C25 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				8A580282FE8C6ACB0CF326D55341D67B /* Info.plist */,
-				7B1A3F4DB5FBFABAF5C70AF5B6B0D04C /* SwiftyCam.modulemap */,
-				4A11E64F959EAA086856E03B6D50FB92 /* SwiftyCam.xcconfig */,
-				3F260082CD9E9D6306D7F71482C3CE01 /* SwiftyCam-dummy.m */,
-				B2CE3DC3C379CA2D649EF17291B506A6 /* SwiftyCam-prefix.pch */,
-				6480079F16B172BC91863C932BE8D2F7 /* SwiftyCam-umbrella.h */,
+				169B5161C3DFD3009818C3706DCFFA46 /* Info.plist */,
+				6FEEC7E28869B26A5A4A1EBA7F48BC66 /* SwiftyCam.modulemap */,
+				98FBEAC161C4A86AB8F72E334F5628C2 /* SwiftyCam.xcconfig */,
+				717043310290273978DC1B974AC5535B /* SwiftyCam-dummy.m */,
+				F17CBD260BB09597827E64F9451EC64D /* SwiftyCam-prefix.pch */,
+				BD8C1D10BB063A876339207AD71A3EFF /* SwiftyCam-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/SwiftyCam";
+			sourceTree = "<group>";
+		};
+		B4D2FE21BCFBA86756BAF8BBD9A0E882 /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				C905F9FEBBE9A7689D108532756852BC /* AFError.swift */,
+				0427B09D21D940BA1714B3287C092ECF /* Alamofire.swift */,
+				715408C9C7EEBA2682F360237CFC8F15 /* DispatchQueue+Alamofire.swift */,
+				D912FFA7030D935B55F397B9CF8B82BC /* MultipartFormData.swift */,
+				CC3E2A22412D650C349C0FB509099024 /* NetworkReachabilityManager.swift */,
+				C71C0EF6DC7360C7FC70AF3225C72B88 /* Notifications.swift */,
+				7D84632D2C074397B984D001CD865F1C /* ParameterEncoding.swift */,
+				1BD5FAB2A37AE1E4F55E47646A17293A /* Request.swift */,
+				102AA90E9C858CB6F375198FC745F503 /* Response.swift */,
+				46AF9D6C89FCF3023F0B0D79A90B5225 /* ResponseSerialization.swift */,
+				B526A2A5C57B05F8E55C8920E71DC482 /* Result.swift */,
+				92AB14D970926CF4E30A21D811764F5D /* ServerTrustPolicy.swift */,
+				50CBD233CCE112B9B85EBC4EA847A4EF /* SessionDelegate.swift */,
+				A0EEB169430E1518DA0FCBFFE9869B4E /* SessionManager.swift */,
+				1F7F6AB450454BD3918398AC74E1701F /* TaskDelegate.swift */,
+				8D4EBF3DB507BCCDE3D65F26F31B11E5 /* Timeline.swift */,
+				089E8E20F97CDBD576544CDC01EDA4B6 /* Validation.swift */,
+				790977735E8AE00FB566B636E9D8B97F /* Support Files */,
+			);
+			name = Alamofire;
+			path = Alamofire;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -156,13 +244,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BE5F2F84AA22A40C2347DE7689A284A9 /* Products */ = {
+		C80E07EB489FA864536FAB66D4747C68 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1E4C6B361B8B571E0992FF2489EF2ABA /* Pods_FaceDex.framework */,
-				BC3E031EDB5978F03219CBA02144915C /* SwiftyCam.framework */,
+				B4D2FE21BCFBA86756BAF8BBD9A0E882 /* Alamofire */,
+				E36FC94DC68581F4C96C7D85B6FB4205 /* SwiftyCam */,
 			);
-			name = Products;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		D184836B30030DC07221D55AF31808DA /* Targets Support Files */ = {
@@ -173,35 +261,75 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		E36FC94DC68581F4C96C7D85B6FB4205 /* SwiftyCam */ = {
+			isa = PBXGroup;
+			children = (
+				641CD6DE1070CC68D3401DE0EDD61832 /* PreviewView.swift */,
+				C83D430F7E1BB31EB0B34B5BB64C277F /* SwiftyCamButton.swift */,
+				5BA4E3D830F06A92B78AE0345E6270BD /* SwiftyCamViewController.swift */,
+				BDC159A704A87B56B2DD23C7244FC8BB /* SwiftyCamViewControllerDelegate.swift */,
+				9B2FB17B846641B9383F8329D88D0C25 /* Support Files */,
+			);
+			name = SwiftyCam;
+			path = SwiftyCam;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		3F64E72C7D917DF761BF80DB8DC8AFC5 /* Headers */ = {
+		10B8489AE49A2AA0B3F9726D3760887F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC376B834A37422175E1F08BAE54B5CF /* SwiftyCam-umbrella.h in Headers */,
+				0C3DABEABC00FB4ACBAFF3DAE0348537 /* SwiftyCam-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		773338A3A23EB3A83E402836A8EEB407 /* Headers */ = {
+		B4002B6E97835FDCCAA5963EFE09A3E0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61DD973DA21762E4D337E200D5B2CEAD /* Pods-FaceDex-umbrella.h in Headers */,
+				1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF8F818F8768EBF04EF916F91331BEE1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB6606C837506820A91054704FD7E060 /* Pods-FaceDex-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		ACD282A935A7A47D0BBAF0011506AA97 /* SwiftyCam */ = {
+		325F1A020AA78C42B3F947F9DDEAD3F5 /* Pods-FaceDex */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 87A5316A9343C15A088D051BF1E55B05 /* Build configuration list for PBXNativeTarget "SwiftyCam" */;
+			buildConfigurationList = 075F0600A84ECD488FC5C329F8A0AE46 /* Build configuration list for PBXNativeTarget "Pods-FaceDex" */;
 			buildPhases = (
-				17AD7079803BD6FD4BE654C7411AB460 /* Sources */,
-				4875327BC1F8442BBF7D2965F336BADA /* Frameworks */,
-				3F64E72C7D917DF761BF80DB8DC8AFC5 /* Headers */,
+				05C63B32FD704F6D7795D4B53754A717 /* Sources */,
+				77F7305FA11849688593B0ADF885B477 /* Frameworks */,
+				CF8F818F8768EBF04EF916F91331BEE1 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4CB2203CF714D261FC143BF4ECEC08CD /* PBXTargetDependency */,
+				A4A297C0F6420E4F6A03648306780B69 /* PBXTargetDependency */,
+			);
+			name = "Pods-FaceDex";
+			productName = "Pods-FaceDex";
+			productReference = 1CFC8822257EBD8FE535D7405C2441AE /* Pods_FaceDex.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		707D50F23D0F6D5AD09EC2BD895CC58F /* SwiftyCam */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1CDCFFE90409E65CA7B4C8D1C47060F8 /* Build configuration list for PBXNativeTarget "SwiftyCam" */;
+			buildPhases = (
+				3579530676FEF53446FF30EADFC07646 /* Sources */,
+				EB7C9FD207D73AE160C9E079A6E09DA1 /* Frameworks */,
+				10B8489AE49A2AA0B3F9726D3760887F /* Headers */,
 			);
 			buildRules = (
 			);
@@ -209,25 +337,24 @@
 			);
 			name = SwiftyCam;
 			productName = SwiftyCam;
-			productReference = BC3E031EDB5978F03219CBA02144915C /* SwiftyCam.framework */;
+			productReference = 58DA326716AB67CB35103BFA4BA8F818 /* SwiftyCam.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		C4A054C8663CD2CD4FD7F032EB71A1F4 /* Pods-FaceDex */ = {
+		88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6DBAEB16FC0271367AA20DC265FA9622 /* Build configuration list for PBXNativeTarget "Pods-FaceDex" */;
+			buildConfigurationList = 419E5D95491847CD79841B971A8A3277 /* Build configuration list for PBXNativeTarget "Alamofire" */;
 			buildPhases = (
-				CDAFF79BEC549AAF983D094216CF9F18 /* Sources */,
-				076A0B509CFC497B466EA840E8FA8A22 /* Frameworks */,
-				773338A3A23EB3A83E402836A8EEB407 /* Headers */,
+				32B9974868188C4803318E36329C87FE /* Sources */,
+				99195E4207764744AEC07ECCBCD550EB /* Frameworks */,
+				B4002B6E97835FDCCAA5963EFE09A3E0 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0769FE7F39693F369C3130BD6D3D7177 /* PBXTargetDependency */,
 			);
-			name = "Pods-FaceDex";
-			productName = "Pods-FaceDex";
-			productReference = 1E4C6B361B8B571E0992FF2489EF2ABA /* Pods_FaceDex.framework */;
+			name = Alamofire;
+			productName = Alamofire;
+			productReference = B5FCC18ABA5C28DC70FB26A602F6BDBF /* Alamofire.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -247,58 +374,122 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = BE5F2F84AA22A40C2347DE7689A284A9 /* Products */;
+			productRefGroup = 7C7FC689CC34031BCC7DFC3A000ED972 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C4A054C8663CD2CD4FD7F032EB71A1F4 /* Pods-FaceDex */,
-				ACD282A935A7A47D0BBAF0011506AA97 /* SwiftyCam */,
+				88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */,
+				325F1A020AA78C42B3F947F9DDEAD3F5 /* Pods-FaceDex */,
+				707D50F23D0F6D5AD09EC2BD895CC58F /* SwiftyCam */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		17AD7079803BD6FD4BE654C7411AB460 /* Sources */ = {
+		05C63B32FD704F6D7795D4B53754A717 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				821FD2B752A2EF4D6EE6F9E3B41D1DF0 /* PreviewView.swift in Sources */,
-				5B55AC4B61F815956B3A5BD5D830715A /* SwiftyCam-dummy.m in Sources */,
-				251D50EB3DD3D6076FB3470A129021E6 /* SwiftyCamButton.swift in Sources */,
-				D02392398D033B9E1CE06371B14FAF53 /* SwiftyCamViewController.swift in Sources */,
-				51BC03656F2CC68E67021D9DC0DE2569 /* SwiftyCamViewControllerDelegate.swift in Sources */,
+				685A592147632D26015DEAB7030D5347 /* Pods-FaceDex-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CDAFF79BEC549AAF983D094216CF9F18 /* Sources */ = {
+		32B9974868188C4803318E36329C87FE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C95118FA6F4FCB0120C43DECE663978 /* Pods-FaceDex-dummy.m in Sources */,
+				9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */,
+				A9EEEA7477981DEEBC72432DE9990A4B /* Alamofire-dummy.m in Sources */,
+				F8B3D3092ED0417E8CDF32033F6122F5 /* Alamofire.swift in Sources */,
+				61200D01A1855D7920CEF835C8BE00B0 /* DispatchQueue+Alamofire.swift in Sources */,
+				B65FCF589DA398C3EFE0128064E510EC /* MultipartFormData.swift in Sources */,
+				A2A6F71B727312BD45CC7A4AAD7B0AB7 /* NetworkReachabilityManager.swift in Sources */,
+				EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */,
+				BE5C67A07E289FE1F9BE27335B159997 /* ParameterEncoding.swift in Sources */,
+				5387216E723A3C68E851CA15573CDD71 /* Request.swift in Sources */,
+				CB6D60925223897FFA2662667DF83E8A /* Response.swift in Sources */,
+				F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* ResponseSerialization.swift in Sources */,
+				7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */,
+				62F65AD8DC4F0F9610F4B8B4738EC094 /* ServerTrustPolicy.swift in Sources */,
+				7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */,
+				AE1EF48399533730D0066E04B22CA2D6 /* SessionManager.swift in Sources */,
+				3626B94094672CB1C9DEA32B9F9502E1 /* TaskDelegate.swift in Sources */,
+				10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */,
+				BBEFE2F9CEB73DC7BD97FFA66A0D9D4F /* Validation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3579530676FEF53446FF30EADFC07646 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B1A2E971379E69841314EC677941A7E /* PreviewView.swift in Sources */,
+				B6E09C122BA4419E8141084A38B4FCB3 /* SwiftyCam-dummy.m in Sources */,
+				92F8A13907AD9FD866C29C22EE953C7C /* SwiftyCamButton.swift in Sources */,
+				0AEDED047528ABE5F1F2F61421EC3FA7 /* SwiftyCamViewController.swift in Sources */,
+				02C41B6DCFE91A17809A9EE256D72B9B /* SwiftyCamViewControllerDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0769FE7F39693F369C3130BD6D3D7177 /* PBXTargetDependency */ = {
+		4CB2203CF714D261FC143BF4ECEC08CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			target = 88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */;
+			targetProxy = 9A5D7CEF98B32F07741CA7FAA9E0D813 /* PBXContainerItemProxy */;
+		};
+		A4A297C0F6420E4F6A03648306780B69 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftyCam;
-			target = ACD282A935A7A47D0BBAF0011506AA97 /* SwiftyCam */;
-			targetProxy = 8524443F74236B1DFFC91E5EF77C7548 /* PBXContainerItemProxy */;
+			target = 707D50F23D0F6D5AD09EC2BD895CC58F /* SwiftyCam */;
+			targetProxy = E4F50CB5BC0607B29BFB20D62A2E365B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		3D6D47EC7DD0231EF8957D6C31C74BCC /* Debug */ = {
+		0A29B6F510198AF64EFD762EF6FA97A5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4A11E64F959EAA086856E03B6D50FB92 /* SwiftyCam.xcconfig */;
+			baseConfigurationReference = 8E94E06B04409FCC5ED40ACA19C0A78A /* Alamofire.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5D23CB1265D456FF8E39C72FFD2162AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98FBEAC161C4A86AB8F72E334F5628C2 /* SwiftyCam.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -311,17 +502,16 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SwiftyCam/SwiftyCam.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = SwiftyCam;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		673254EEAF0B5BF4596080C749645884 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -363,7 +553,75 @@
 			};
 			name = Release;
 		};
-		AEDDF78DE7A9DF457E51069EE963760E /* Debug */ = {
+		9167BD07FA6735479D424FA75D988725 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98FBEAC161C4A86AB8F72E334F5628C2 /* SwiftyCam.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyCam/SwiftyCam-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyCam/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyCam/SwiftyCam.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftyCam;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A488BEAB7673244AB179B99829BD5BAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1408D5B0BC71EF6D2FF8C51B647D4CDF /* Pods-FaceDex.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-FaceDex/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FaceDex/Pods-FaceDex.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_FaceDex;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C4E6AC27E40F12CA6E052D0B71E49FF9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 173682BA533E48ED61F655D0D769CA14 /* Pods-FaceDex.debug.xcconfig */;
 			buildSettings = {
@@ -398,73 +656,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		DFC57338C764888B999145C59F152EAF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4A11E64F959EAA086856E03B6D50FB92 /* SwiftyCam.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftyCam/SwiftyCam-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftyCam/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftyCam/SwiftyCam.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SwiftyCam;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		E03116A890272643D0F7B1DBB9E190DD /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1408D5B0BC71EF6D2FF8C51B647D4CDF /* Pods-FaceDex.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-FaceDex/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-FaceDex/Pods-FaceDex.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_FaceDex;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		E4F26E6EB105713A6A7E7E2E283AC2DF /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -510,9 +701,60 @@
 			};
 			name = Debug;
 		};
+		F383079BFBF927813EA3613CFB679FDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E94E06B04409FCC5ED40ACA19C0A78A /* Alamofire.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		075F0600A84ECD488FC5C329F8A0AE46 /* Build configuration list for PBXNativeTarget "Pods-FaceDex" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4E6AC27E40F12CA6E052D0B71E49FF9 /* Debug */,
+				A488BEAB7673244AB179B99829BD5BAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1CDCFFE90409E65CA7B4C8D1C47060F8 /* Build configuration list for PBXNativeTarget "SwiftyCam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9167BD07FA6735479D424FA75D988725 /* Debug */,
+				5D23CB1265D456FF8E39C72FFD2162AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -522,20 +764,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6DBAEB16FC0271367AA20DC265FA9622 /* Build configuration list for PBXNativeTarget "Pods-FaceDex" */ = {
+		419E5D95491847CD79841B971A8A3277 /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AEDDF78DE7A9DF457E51069EE963760E /* Debug */,
-				E03116A890272643D0F7B1DBB9E190DD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		87A5316A9343C15A088D051BF1E55B05 /* Build configuration list for PBXNativeTarget "SwiftyCam" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3D6D47EC7DD0231EF8957D6C31C74BCC /* Debug */,
-				DFC57338C764888B999145C59F152EAF /* Release */,
+				F383079BFBF927813EA3613CFB679FDE /* Debug */,
+				0A29B6F510198AF64EFD762EF6FA97A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
