@@ -72,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				1D332BC31E45B49A0017DA48 /* AppDelegate.swift */,
+				1416FAEB1E462A2200A84993 /* API.swift */,
 				1D332BC51E45B49A0017DA48 /* ViewController.swift */,
 				1D332BD51E461FEA0017DA48 /* SwiftyRecordButton.swift */,
 				1D332BD71E4620CB0017DA48 /* PhotoViewController.swift */,
@@ -81,7 +82,6 @@
 				1D332BCA1E45B49A0017DA48 /* Assets.xcassets */,
 				1D332BCC1E45B49A0017DA48 /* LaunchScreen.storyboard */,
 				1D332BCF1E45B49A0017DA48 /* Info.plist */,
-				1416FAEB1E462A2200A84993 /* API.swift */,
 			);
 			path = FaceDex;
 			sourceTree = "<group>";
