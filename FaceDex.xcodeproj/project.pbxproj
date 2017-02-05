@@ -21,6 +21,7 @@
 		1DFD078D1E46632900218D71 /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFD078C1E46632900218D71 /* TextCell.swift */; };
 		1DFD078F1E46AA3C00218D71 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFD078E1E46AA3C00218D71 /* UIImage+Extensions.swift */; };
 		1DFD07951E46DDA800218D71 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFD07941E46DDA800218D71 /* ProfileCell.swift */; };
+		1DFD07991E46F05900218D71 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFD07981E46F05900218D71 /* ImageLoader.swift */; };
 		F09754C41F83A4DCDF4FBF52 /* Pods_FaceDex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE99F8F8424A7A4CB0219250 /* Pods_FaceDex.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		1DFD078C1E46632900218D71 /* TextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextCell.swift; sourceTree = "<group>"; };
 		1DFD078E1E46AA3C00218D71 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		1DFD07941E46DDA800218D71 /* ProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		1DFD07981E46F05900218D71 /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		58678E6F8E4428F73E259AEE /* Pods-FaceDex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceDex.release.xcconfig"; path = "Pods/Target Support Files/Pods-FaceDex/Pods-FaceDex.release.xcconfig"; sourceTree = "<group>"; };
 		5ECE31550CD7E033998A610D /* Pods-FaceDex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceDex.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FaceDex/Pods-FaceDex.debug.xcconfig"; sourceTree = "<group>"; };
 		EE99F8F8424A7A4CB0219250 /* Pods_FaceDex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceDex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +84,7 @@
 				1D332BC31E45B49A0017DA48 /* AppDelegate.swift */,
 				1416FAEB1E462A2200A84993 /* API.swift */,
 				1DFD078E1E46AA3C00218D71 /* UIImage+Extensions.swift */,
+				1DFD07981E46F05900218D71 /* ImageLoader.swift */,
 				1DFD07911E46D4D600218D71 /* Views */,
 				1DFD07931E46D54900218D71 /* ViewModels */,
 				1DFD07901E46D43A00218D71 /* Models */,
@@ -174,7 +177,6 @@
 				TargetAttributes = {
 					1D332BBF1E45B49A0017DA48 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = E299TDEV8Z;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -274,6 +276,7 @@
 				1DFD07951E46DDA800218D71 /* ProfileCell.swift in Sources */,
 				1D332BC41E45B49A0017DA48 /* AppDelegate.swift in Sources */,
 				1416FAEC1E462A2200A84993 /* API.swift in Sources */,
+				1DFD07991E46F05900218D71 /* ImageLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,10 +392,10 @@
 			baseConfigurationReference = 5ECE31550CD7E033998A610D /* Pods-FaceDex.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = E299TDEV8Z;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FaceDex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.BranchBrunch.FaceDex.jackychiu;
+				PRODUCT_BUNDLE_IDENTIFIER = io.BranchBrunch.FaceDex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -403,10 +406,10 @@
 			baseConfigurationReference = 58678E6F8E4428F73E259AEE /* Pods-FaceDex.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = E299TDEV8Z;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FaceDex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.BranchBrunch.FaceDex.jackychiu;
+				PRODUCT_BUNDLE_IDENTIFIER = io.BranchBrunch.FaceDex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

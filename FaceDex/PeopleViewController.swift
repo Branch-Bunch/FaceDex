@@ -48,6 +48,7 @@ class PeopleViewController: UIViewController {
 		peopleTableView.delegate = self
 		peopleTableView.dataSource = self
 		peopleTableView.register(TextCell.self, forCellReuseIdentifier: String(describing: TextCell.self))
+		peopleTableView.register(ProfileCell.self, forCellReuseIdentifier: String(describing: ProfileCell.self))
 
 		view.addSubview(backgroundImageView)
 		view.addSubview(peopleTableView)
@@ -68,14 +69,24 @@ extension PeopleViewController: UITableViewDataSource {
 	}
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: TextCell.self)) as! TextCell
+		let masterCell: UITableViewCell
 		if indexPath.row == viewModel.persons.count {
+			let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: TextCell.self)) as! TextCell
 			cell.title = "Want to capture this person?"
+			cell.render()
+			masterCell = cell
 		} else {
-			cell.title = viewModel.persons[indexPath.row].name
+			let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ProfileCell.self)) as! ProfileCell
+			let person = viewModel.persons[indexPath.row]
+			cell.name = person.name
+			cell.socialHandle = person.socialHandle
+			if let data = viewModel.profiles[indexPath.row], let image = UIImage(data: data) {
+				cell.profile = image
+			}
+			cell.render()
+			masterCell = cell
 		}
-		cell.render()
-		return cell
+		return masterCell
 	}
 }
 
@@ -110,6 +121,11 @@ extension PeopleViewController: FaceModelDelegate {
 
 	func recognizeResponse() {
 		peopleTableView.reloadData()
+	}
+
+	func updatedImageAt(index: Int) {
+		let indexPath = IndexPath(row: index, section: 0)
+		peopleTableView.reloadRows(at: [indexPath], with: UITableViewRowAnimation.right)
 	}
 
 	func errorResponse(message: String) {
