@@ -12,7 +12,7 @@ import Argo
 protocol FaceModelDelegate: class {
 	func enrollResponse(enrollResponse: EnrollResponse)
 	func recognizeResponse()
-	func errorResponse()
+	func errorResponse(message: String)
 }
 
 class FaceViewModel {
@@ -47,8 +47,17 @@ class FaceViewModel {
 		
 		Alamofire.request(API.recognize.url, method: .post, parameters: params, encoding: JSONEncoding.default).responseJSON { response in
 			debugPrint(response)
-			if let value = response.result.value, let recognizeResponse: RecognizeResponse = decode(value) {
-				self.persons = recognizeResponse.persons
+			if response.result.isSuccess {
+				if let value = response.result.value, let recognizeResponse: RecognizeResponse = decode(value) {
+					if let error = recognizeResponse.error {
+						self.delegate?.errorResponse(message: error)
+					} else {
+						self.persons = recognizeResponse.persons
+						self.delegate?.recognizeResponse()
+					}
+				}
+			} else {
+				self.delegate?.errorResponse(message: "API Broke")
 			}
 		}
 	}

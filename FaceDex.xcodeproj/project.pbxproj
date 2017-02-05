@@ -171,6 +171,7 @@
 				TargetAttributes = {
 					1D332BBF1E45B49A0017DA48 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = GEKRKSA622;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -384,10 +385,10 @@
 			baseConfigurationReference = 5ECE31550CD7E033998A610D /* Pods-FaceDex.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = GEKRKSA622;
 				INFOPLIST_FILE = FaceDex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.BranchBrunch.FaceDex;
+				PRODUCT_BUNDLE_IDENTIFIER = io.BranchBrunch.FaceDex.jackychiu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -398,10 +399,10 @@
 			baseConfigurationReference = 58678E6F8E4428F73E259AEE /* Pods-FaceDex.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = GEKRKSA622;
 				INFOPLIST_FILE = FaceDex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.BranchBrunch.FaceDex;
+				PRODUCT_BUNDLE_IDENTIFIER = io.BranchBrunch.FaceDex.jackychiu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
