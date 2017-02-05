@@ -116,7 +116,7 @@ extension PeopleViewController: UITableViewDelegate {
 			}
 			present(alert, animated: true, completion: nil)
 		} else {
-			guard let url = self.viewModel.persons[indexPath.row].link else { return }
+			let url = viewModel.persons[indexPath.row].github.url
 			UIApplication.shared.open(NSURL(string: url) as! URL, options: [:], completionHandler: nil)
 		}
 	}
@@ -140,10 +140,12 @@ extension PeopleViewController: FaceModelDelegate {
 
 	func updatedImageAt(index: Int) {
 		let indexPath = IndexPath(row: index, section: 0)
-		peopleTableView.reloadRows(at: [indexPath], with: UITableViewRowAnimation.right)
+		peopleTableView.reloadRows(at: [indexPath], with: UITableViewRowAnimation.fade)
 	}
 
 	func errorResponse(message: String) {
+		fetched = true
+		peopleTableView.reloadData()
 		let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
 		alert.addAction(UIAlertAction(title: "Close", style: .destructive, handler: nil))
 		present(alert, animated: true, completion: nil)
