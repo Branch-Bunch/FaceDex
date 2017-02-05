@@ -55,7 +55,7 @@ class PeopleViewController: UIViewController {
 		view.addSubview(peopleTableView)
 		view.addSubview(cancelButton)
 
-		viewModel.enrollFace(name: "Jacky")
+		viewModel.recognizeFace()
 	}
 
 	func cancel() {
