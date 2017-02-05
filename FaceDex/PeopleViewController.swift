@@ -79,7 +79,7 @@ extension PeopleViewController: UITableViewDataSource {
 			let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ProfileCell.self)) as! ProfileCell
 			let person = viewModel.persons[indexPath.row]
 			cell.name = person.name
-			cell.socialHandle = person.socialHandle
+			cell.socialHandle = person.github.handle
 			if let data = viewModel.profiles[indexPath.row], let image = UIImage(data: data) {
 				cell.profile = image
 			}
@@ -102,7 +102,7 @@ extension PeopleViewController: UITableViewDelegate {
 				UIAlertAction(title: "Capture", style: .default, handler: { [weak self] (action: UIAlertAction) in
 					guard let nameField = alert.textFields?.first, nameField.text != nil, let name = nameField.text, !name.isEmpty, let githubField = alert.textFields?.last, githubField.text != nil, let github = githubField.text, !github.isEmpty else { return }
 					
-					self?.viewModel.enrollFace(name: name, github: github)
+					self?.viewModel.enrollFace(name: name, handle: github)
 			}))
 			alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
 			alert.addTextField {(textField: UITextField!) in

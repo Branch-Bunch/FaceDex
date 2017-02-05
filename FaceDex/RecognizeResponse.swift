@@ -11,14 +11,14 @@ import Runes
 import Curry
 
 struct RecognizeResponse {
-	let persons: [Person]
+	let people: [Person]
 	let error: String?
 }
 
 extension RecognizeResponse: Decodable {
 	static func decode(_ json: JSON) -> Decoded<RecognizeResponse> {
 		return curry(self.init)
-		<^> json <|| "persons"
+		<^> json <|| "people"
 		<*> json <|? "error"
 	}
 }

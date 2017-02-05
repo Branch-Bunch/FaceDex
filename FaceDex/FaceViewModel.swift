@@ -26,11 +26,11 @@ class FaceViewModel {
 		self.imageData = imageData
 	}
 
-	func enrollFace(name: String, github: String) {
+	func enrollFace(name: String, handle: String) {
 		guard let imageData = imageData else { return }
 		let params: Parameters = [
 			"name": name,
-			"github": github,
+			"handle": handle,
 			"image": imageData.base64EncodedString()
 		]
 		
@@ -55,7 +55,7 @@ class FaceViewModel {
 					if let error = recognizeResponse.error {
 						self.delegate?.errorResponse(message: error)
 					} else {
-						self.persons = recognizeResponse.persons
+						self.persons = recognizeResponse.people
 						self.profiles = Array<Data?>(repeating: nil, count: self.persons.count)
 						self.delegate?.recognizeResponse()
 						self.getImages()

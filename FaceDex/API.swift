@@ -12,6 +12,7 @@ import Argo
 struct Links {
 //	static let baseURL = "http://localhost:8080"
 	static let baseURL = "https://face-dex.herokuapp.com"
+	static let github = "https://github.com"
 }
 
 public enum API: String {

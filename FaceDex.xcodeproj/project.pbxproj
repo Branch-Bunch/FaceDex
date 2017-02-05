@@ -22,6 +22,7 @@
 		1DFD078F1E46AA3C00218D71 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFD078E1E46AA3C00218D71 /* UIImage+Extensions.swift */; };
 		1DFD07951E46DDA800218D71 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFD07941E46DDA800218D71 /* ProfileCell.swift */; };
 		1DFD07991E46F05900218D71 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFD07981E46F05900218D71 /* ImageLoader.swift */; };
+		1DFD079B1E4713F600218D71 /* GitHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFD079A1E4713F600218D71 /* GitHub.swift */; };
 		F09754C41F83A4DCDF4FBF52 /* Pods_FaceDex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE99F8F8424A7A4CB0219250 /* Pods_FaceDex.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		1DFD078E1E46AA3C00218D71 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		1DFD07941E46DDA800218D71 /* ProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		1DFD07981E46F05900218D71 /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		1DFD079A1E4713F600218D71 /* GitHub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHub.swift; sourceTree = "<group>"; };
 		58678E6F8E4428F73E259AEE /* Pods-FaceDex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceDex.release.xcconfig"; path = "Pods/Target Support Files/Pods-FaceDex/Pods-FaceDex.release.xcconfig"; sourceTree = "<group>"; };
 		5ECE31550CD7E033998A610D /* Pods-FaceDex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceDex.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FaceDex/Pods-FaceDex.debug.xcconfig"; sourceTree = "<group>"; };
 		EE99F8F8424A7A4CB0219250 /* Pods_FaceDex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceDex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				1D332BD91E462AD00017DA48 /* Person.swift */,
+				1DFD079A1E4713F600218D71 /* GitHub.swift */,
 				1DFD07851E462E9D00218D71 /* RecognizeResponse.swift */,
 				14CCE4351E46903C00561739 /* EnrollResponse.swift */,
 			);
@@ -268,6 +271,7 @@
 				1DFD07861E462E9D00218D71 /* RecognizeResponse.swift in Sources */,
 				1D332BC61E45B49A0017DA48 /* CameraViewController.swift in Sources */,
 				1D332BD81E4620CB0017DA48 /* PeopleViewController.swift in Sources */,
+				1DFD079B1E4713F600218D71 /* GitHub.swift in Sources */,
 				1DFD078F1E46AA3C00218D71 /* UIImage+Extensions.swift in Sources */,
 				1DFD07891E4638B800218D71 /* FaceViewModel.swift in Sources */,
 				1D332BD61E461FEA0017DA48 /* SwiftyRecordButton.swift in Sources */,
