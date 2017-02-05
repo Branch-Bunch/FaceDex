@@ -10,7 +10,7 @@ import Alamofire
 import Argo
 
 protocol FaceModelDelegate: class {
-	func enrollResponse()
+	func enrollResponse(enrollResponse: EnrollResponse)
 	func recognizeResponse()
 	func errorResponse()
 }
@@ -33,6 +33,9 @@ class FaceViewModel {
 		
 		Alamofire.request(API.enroll.url, method: .post, parameters: params, encoding: JSONEncoding.default).responseJSON { response in
 			debugPrint(response)
+			if let value = response.result.value, let enrollResponse: EnrollResponse = decode(value) {
+				self.delegate?.enrollResponse(enrollResponse: enrollResponse)
+			}
 		}
 	}
 	

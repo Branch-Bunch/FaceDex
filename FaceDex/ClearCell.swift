@@ -39,7 +39,6 @@ class ClearCell: UITableViewCell {
 			blurEffectView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
 			blurEffectView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),
 
-
 			titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
 			titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
 			titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),

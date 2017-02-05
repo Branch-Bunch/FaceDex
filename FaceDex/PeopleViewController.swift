@@ -41,7 +41,6 @@ class PeopleViewController: UIViewController {
 		cancelButton.setImage(#imageLiteral(resourceName: "cancel"), for: UIControlState())
 		cancelButton.addTarget(self, action: #selector(cancel), for: .touchUpInside)
 
-
 		peopleTableView = UITableView(frame: view.bounds)
 		peopleTableView.backgroundColor = .clear
 		peopleTableView.contentInset = UIEdgeInsets(top: view.bounds.height - 64, left: 0, bottom: 0, right: 0)
@@ -80,7 +79,6 @@ extension PeopleViewController: UITableViewDataSource {
 	}
 }
 
-
 extension PeopleViewController: UITableViewDelegate {
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		if indexPath.row == viewModel.persons.count {
@@ -100,7 +98,15 @@ extension PeopleViewController: UITableViewDelegate {
 }
 
 extension PeopleViewController: FaceModelDelegate {
-	func enrollResponse() {}
+	func enrollResponse(enrollResponse: EnrollResponse) {
+		if enrollResponse.success {
+			dismiss(animated: true, completion: nil)
+		} else {
+			let alert = UIAlertController(title: "Error", message: enrollResponse.error, preferredStyle: .alert)
+			alert.addAction(UIAlertAction(title: "Dissmiss", style: .destructive, handler: nil))
+			present(alert, animated: true, completion: nil)
+		}
+	}
 
 	func recognizeResponse() {
 		peopleTableView.reloadData()

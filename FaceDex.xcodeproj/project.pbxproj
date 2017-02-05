@@ -79,20 +79,44 @@
 			children = (
 				1D332BC31E45B49A0017DA48 /* AppDelegate.swift */,
 				1416FAEB1E462A2200A84993 /* API.swift */,
-				1D332BC51E45B49A0017DA48 /* CameraViewController.swift */,
 				1DFD078E1E46AA3C00218D71 /* UIImage+Extensions.swift */,
-				1D332BD51E461FEA0017DA48 /* SwiftyRecordButton.swift */,
-				1D332BD71E4620CB0017DA48 /* PeopleViewController.swift */,
-				1DFD07881E4638B800218D71 /* FaceViewModel.swift */,
-				1DFD078C1E46632900218D71 /* ClearCell.swift */,
-				1D332BD91E462AD00017DA48 /* Person.swift */,
-				1DFD07851E462E9D00218D71 /* RecognizeResponse.swift */,
-				14CCE4351E46903C00561739 /* EnrollResponse.swift */,
+				1DFD07911E46D4D600218D71 /* Views */,
+				1DFD07931E46D54900218D71 /* ViewModels */,
+				1DFD07901E46D43A00218D71 /* Models */,
 				1D332BCA1E45B49A0017DA48 /* Assets.xcassets */,
 				1D332BCC1E45B49A0017DA48 /* LaunchScreen.storyboard */,
 				1D332BCF1E45B49A0017DA48 /* Info.plist */,
 			);
 			path = FaceDex;
+			sourceTree = "<group>";
+		};
+		1DFD07901E46D43A00218D71 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1D332BD91E462AD00017DA48 /* Person.swift */,
+				1DFD07851E462E9D00218D71 /* RecognizeResponse.swift */,
+				14CCE4351E46903C00561739 /* EnrollResponse.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		1DFD07911E46D4D600218D71 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1D332BD51E461FEA0017DA48 /* SwiftyRecordButton.swift */,
+				1DFD078C1E46632900218D71 /* ClearCell.swift */,
+				1D332BC51E45B49A0017DA48 /* CameraViewController.swift */,
+				1D332BD71E4620CB0017DA48 /* PeopleViewController.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		1DFD07931E46D54900218D71 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1DFD07881E4638B800218D71 /* FaceViewModel.swift */,
+			);
+			name = ViewModels;
 			sourceTree = "<group>";
 		};
 		6CAF320C4E7A1A7932E80041 /* Pods */ = {
@@ -147,7 +171,6 @@
 				TargetAttributes = {
 					1D332BBF1E45B49A0017DA48 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = E299TDEV8Z;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -361,7 +384,7 @@
 			baseConfigurationReference = 5ECE31550CD7E033998A610D /* Pods-FaceDex.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = E299TDEV8Z;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FaceDex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.BranchBrunch.FaceDex;
@@ -375,7 +398,7 @@
 			baseConfigurationReference = 58678E6F8E4428F73E259AEE /* Pods-FaceDex.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = E299TDEV8Z;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FaceDex/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.BranchBrunch.FaceDex;
