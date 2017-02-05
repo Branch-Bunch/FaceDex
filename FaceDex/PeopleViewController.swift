@@ -36,7 +36,6 @@ class PeopleViewController: UIViewController {
 		let backgroundImageView = UIImageView(frame: view.frame)
 		backgroundImageView.image = backgroundImage
 
-
 		let cancelButton = UIButton(frame: CGRect(x: 10.0, y: 10.0, width: 30.0, height: 30.0))
 		cancelButton.setImage(#imageLiteral(resourceName: "cancel"), for: UIControlState())
 		cancelButton.addTarget(self, action: #selector(cancel), for: .touchUpInside)
@@ -48,7 +47,7 @@ class PeopleViewController: UIViewController {
 		peopleTableView.separatorStyle = .none
 		peopleTableView.delegate = self
 		peopleTableView.dataSource = self
-		peopleTableView.register(ClearCell.self, forCellReuseIdentifier: String(describing: ClearCell.self))
+		peopleTableView.register(TextCell.self, forCellReuseIdentifier: String(describing: TextCell.self))
 
 		view.addSubview(backgroundImageView)
 		view.addSubview(peopleTableView)
@@ -69,7 +68,7 @@ extension PeopleViewController: UITableViewDataSource {
 	}
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ClearCell.self)) as! ClearCell
+		let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: TextCell.self)) as! TextCell
 		if indexPath.row == viewModel.persons.count {
 			cell.title = "Want to capture this person?"
 		} else {

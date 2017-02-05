@@ -17,6 +17,7 @@ protocol FaceModelDelegate: class {
 
 class FaceViewModel {
 	var persons: [Person] = []
+	var profiles: [Data] = []
 	var imageData: Data?
 	weak var delegate: FaceModelDelegate?
 	
@@ -54,6 +55,7 @@ class FaceViewModel {
 					} else {
 						self.persons = recognizeResponse.persons
 						self.delegate?.recognizeResponse()
+						// wow this is ugly ...
 					}
 				}
 			} else {
