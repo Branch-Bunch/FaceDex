@@ -12,6 +12,7 @@ import Runes
 
 struct Person {
 	let name: String
+	let socialHandle: String?
 	let link: String?
 }
 
@@ -19,6 +20,7 @@ extension Person: Decodable {
 	static func decode(_ json: JSON) -> Decoded<Person> {
 		return curry(self.init)
 		<^> json <| "name"
+		<*> json <|? "socialHandle"
 		<*> json <|? "url"
 	}
 }

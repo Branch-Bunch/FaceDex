@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ClearCell: UITableViewCell {
+class TextCell: UITableViewCell {
 
 	var title: String?
 	private let titleLabel = UILabel()

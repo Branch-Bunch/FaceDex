@@ -13,10 +13,12 @@ protocol FaceModelDelegate: class {
 	func enrollResponse(enrollResponse: EnrollResponse)
 	func recognizeResponse()
 	func errorResponse(message: String)
+	func updatedImageAt(index: Int)
 }
 
 class FaceViewModel {
 	var persons: [Person] = []
+	var profiles: [Data?] = []
 	var imageData: Data?
 	weak var delegate: FaceModelDelegate?
 	
@@ -53,11 +55,23 @@ class FaceViewModel {
 						self.delegate?.errorResponse(message: error)
 					} else {
 						self.persons = recognizeResponse.persons
+						self.profiles = Array<Data?>(repeating: nil, count: self.persons.count)
 						self.delegate?.recognizeResponse()
+						self.getImages()
 					}
 				}
 			} else {
 				self.delegate?.errorResponse(message: "API Broke")
+			}
+		}
+	}
+
+	func getImages() {
+		for (index, person) in self.persons.enumerated() {
+			guard let url = person.link else { return }
+			ImageLoader.fetch(url: url) { data in
+				self.profiles[index] = data
+				self.delegate?.updatedImageAt(index: index)
 			}
 		}
 	}
