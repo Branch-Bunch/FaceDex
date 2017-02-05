@@ -43,6 +43,7 @@ class ProfileCell: UITableViewCell {
 			socialLabel
 			])
 		verticalStackView.axis = .vertical
+		verticalStackView.spacing = 4
 
 		let horizontalStackView = UIStackView(arrangedSubviews: [
 			profileView,
@@ -54,6 +55,8 @@ class ProfileCell: UITableViewCell {
 		horizontalStackView.translatesAutoresizingMaskIntoConstraints = false
 		contentView.addSubview(horizontalStackView)
 
+
+
 		NSLayoutConstraint.activate([
 			blurEffectView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
 			blurEffectView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
@@ -64,6 +67,8 @@ class ProfileCell: UITableViewCell {
 			horizontalStackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
 			horizontalStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
 			horizontalStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),
+
+			profileView.widthAnchor.constraint(equalTo: horizontalStackView.heightAnchor)
 			])
 	}
 
@@ -80,6 +85,7 @@ class ProfileCell: UITableViewCell {
 		}
 		if let profile = profile {
 			profileView.image = profile
+			profileView.isHidden = false
 		}
 	}
 
@@ -90,6 +96,7 @@ class ProfileCell: UITableViewCell {
 		nameLabel.text = nil
 		socialLabel.text = nil
 		profileView.image = nil
+		profileView.isHidden = true
 	}
 }
 

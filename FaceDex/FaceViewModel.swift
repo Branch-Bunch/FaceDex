@@ -69,8 +69,7 @@ class FaceViewModel {
 
 	func getImages() {
 		for (index, person) in self.persons.enumerated() {
-			guard let url = person.link else { return }
-			ImageLoader.fetch(url: url + ".png") { data in
+			ImageLoader.fetch(url: "\(person.github.url).png") { data in
 				self.profiles[index] = data
 				self.delegate?.updatedImageAt(index: index)
 			}

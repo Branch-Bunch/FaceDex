@@ -93,7 +93,7 @@ extension PeopleViewController: UITableViewDataSource {
 	}
 
 	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-		return indexPath.row != viewModel.persons.count ? 64 : 90
+		return indexPath.row == viewModel.persons.count ? 64 : 90
 	}
 }
 
