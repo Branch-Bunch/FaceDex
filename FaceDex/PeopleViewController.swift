@@ -88,6 +88,10 @@ extension PeopleViewController: UITableViewDataSource {
 		}
 		return masterCell
 	}
+
+	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+		return indexPath.row != viewModel.persons.count ? 64 : 90
+	}
 }
 
 extension PeopleViewController: UITableViewDelegate {
@@ -104,6 +108,9 @@ extension PeopleViewController: UITableViewDelegate {
 				textField.placeholder = "Name"
 			}
 			present(alert, animated: true, completion: nil)
+		} else {
+			guard let url = self.viewModel.persons[indexPath.row].link else { return }
+			UIApplication.shared.open(NSURL(string: url) as! URL, options: [:], completionHandler: nil)
 		}
 	}
 }
