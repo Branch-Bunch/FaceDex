@@ -31,8 +31,8 @@ class FaceViewModel {
 			"image": imageData.base64EncodedString()
 		]
 		
-		Alamofire.request(API.enroll.url, method: .post, parameters: params).responseJSON { response in
-			debugPrint(response.result)
+		Alamofire.request(API.enroll.url, method: .post, parameters: params, encoding: JSONEncoding.default).responseJSON { response in
+			debugPrint(response)
 		}
 	}
 	
@@ -42,8 +42,8 @@ class FaceViewModel {
 			"image": imageData.base64EncodedString()
 		]
 		
-		Alamofire.request(API.recognize.url, method: .post, parameters: params).responseJSON { response in
-			debugPrint(response.result)
+		Alamofire.request(API.recognize.url, method: .post, parameters: params, encoding: JSONEncoding.default).responseJSON { response in
+			debugPrint(response)
 			if let value = response.result.value, let recognizeResponse: RecognizeResponse = decode(value) {
 				self.persons = recognizeResponse.persons
 			}
