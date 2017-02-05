@@ -71,7 +71,7 @@ extension PeopleViewController: UITableViewDataSource {
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ClearCell.self)) as! ClearCell
 		if indexPath.row == viewModel.persons.count {
-			cell.title = "This the droid you were looking for?"
+			cell.title = "Want to capture this person?"
 		} else {
 			cell.title = viewModel.persons[indexPath.row].name
 		}
@@ -82,7 +82,21 @@ extension PeopleViewController: UITableViewDataSource {
 
 
 extension PeopleViewController: UITableViewDelegate {
-	// touch events
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		if indexPath.row == viewModel.persons.count {
+			let alert = UIAlertController(title: "Capture this person!", message: nil, preferredStyle: .alert)
+			alert.addAction(
+				UIAlertAction(title: "Capture", style: .default, handler: { [weak self] (action: UIAlertAction) in
+					guard let alertTextField = alert.textFields?.first, alertTextField.text != nil, let name = alertTextField.text, !name.isEmpty else { return }
+					self?.viewModel.enrollFace(name: name)
+			}))
+			alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
+			alert.addTextField{(textField: UITextField!) in
+				textField.placeholder = "Name"
+			}
+			present(alert, animated: true, completion: nil)
+		}
+	}
 }
 
 extension PeopleViewController: FaceModelDelegate {
