@@ -54,6 +54,7 @@ class PeopleViewController: UIViewController {
 		view.addSubview(peopleTableView)
 		view.addSubview(cancelButton)
 
+		viewModel.delegate = self
 		viewModel.recognizeFace()
 	}
 
@@ -112,6 +113,10 @@ extension PeopleViewController: FaceModelDelegate {
 		peopleTableView.reloadData()
 	}
 
-	func errorResponse() {}
+	func errorResponse(message: String) {
+		let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+		alert.addAction(UIAlertAction(title: "Close", style: .destructive, handler: nil))
+		present(alert, animated: true, completion: nil)
+	}
 
 }

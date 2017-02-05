@@ -11,7 +11,6 @@ import Runes
 import Curry
 
 struct RecognizeResponse {
-	let success: Bool
 	let persons: [Person]
 	let error: String?
 }
@@ -19,8 +18,7 @@ struct RecognizeResponse {
 extension RecognizeResponse: Decodable {
 	static func decode(_ json: JSON) -> Decoded<RecognizeResponse> {
 		return curry(self.init)
-		<^> json <| "success"
-		<*> json <|| "persons"
+		<^> json <|| "persons"
 		<*> json <|? "error"
 	}
 }
