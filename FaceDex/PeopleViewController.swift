@@ -15,6 +15,7 @@ class PeopleViewController: UIViewController {
 	}
 
 	private var backgroundImage: UIImage
+	fileprivate var activityIndicator: UIActivityIndicatorView!
 	fileprivate var peopleTableView: UITableView!
 	fileprivate var viewModel: FaceViewModel!
 	fileprivate var fetched: Bool
@@ -51,13 +52,21 @@ class PeopleViewController: UIViewController {
 		peopleTableView.dataSource = self
 		peopleTableView.register(TextCell.self, forCellReuseIdentifier: String(describing: TextCell.self))
 		peopleTableView.register(ProfileCell.self, forCellReuseIdentifier: String(describing: ProfileCell.self))
+		
+		activityIndicator = UIActivityIndicatorView()
+		activityIndicator.frame = CGRect(x: 0.0, y: 0.0, width: 40.0, height: 40.0)
+		activityIndicator.center = view.center
+		activityIndicator.hidesWhenStopped = true
+		activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.whiteLarge
 
 		view.addSubview(backgroundImageView)
 		view.addSubview(peopleTableView)
+		view.addSubview(activityIndicator)
 		view.addSubview(cancelButton)
 
 		viewModel.delegate = self
 		viewModel.recognizeFace()
+		activityIndicator.startAnimating()
 	}
 
 	func cancel() {
@@ -135,6 +144,7 @@ extension PeopleViewController: FaceModelDelegate {
 
 	func recognizeResponse() {
 		fetched = true
+		activityIndicator.stopAnimating()
 		peopleTableView.reloadData()
 	}
 
@@ -146,6 +156,7 @@ extension PeopleViewController: FaceModelDelegate {
 	func errorResponse(message: String) {
 		fetched = true
 		peopleTableView.reloadData()
+		activityIndicator.stopAnimating()
 		let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
 		alert.addAction(UIAlertAction(title: "Close", style: .destructive, handler: nil))
 		present(alert, animated: true, completion: nil)
