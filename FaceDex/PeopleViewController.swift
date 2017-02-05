@@ -17,10 +17,12 @@ class PeopleViewController: UIViewController {
 	private var backgroundImage: UIImage
 	fileprivate var peopleTableView: UITableView!
 	fileprivate var viewModel: FaceViewModel!
+	fileprivate var fetched: Bool
 
 	init(image: UIImage) {
 		let imageData = UIImagePNGRepresentation(image)
 		self.backgroundImage = image
+		fetched = false
 		super.init(nibName: nil, bundle: nil)
 		viewModel = FaceViewModel(imageData: imageData)
 	}
@@ -59,13 +61,14 @@ class PeopleViewController: UIViewController {
 	}
 
 	func cancel() {
+		fetched = false
 		dismiss(animated: true, completion: nil)
 	}
 }
 
 extension PeopleViewController: UITableViewDataSource {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return viewModel.persons.count + 1 // extra 1 for question cell
+		return (fetched) ? viewModel.persons.count + 1 : 0 // extra 1 for question cell
 	}
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -131,6 +134,7 @@ extension PeopleViewController: FaceModelDelegate {
 	}
 
 	func recognizeResponse() {
+		fetched = true
 		peopleTableView.reloadData()
 	}
 
