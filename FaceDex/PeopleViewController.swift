@@ -100,12 +100,16 @@ extension PeopleViewController: UITableViewDelegate {
 			let alert = UIAlertController(title: "Capture this person!", message: nil, preferredStyle: .alert)
 			alert.addAction(
 				UIAlertAction(title: "Capture", style: .default, handler: { [weak self] (action: UIAlertAction) in
-					guard let alertTextField = alert.textFields?.first, alertTextField.text != nil, let name = alertTextField.text, !name.isEmpty else { return }
-					self?.viewModel.enrollFace(name: name)
+					guard let nameField = alert.textFields?.first, nameField.text != nil, let name = nameField.text, !name.isEmpty, let githubField = alert.textFields?.last, githubField.text != nil, let github = githubField.text, !github.isEmpty else { return }
+					
+					self?.viewModel.enrollFace(name: name, github: github)
 			}))
 			alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
-			alert.addTextField{(textField: UITextField!) in
+			alert.addTextField {(textField: UITextField!) in
 				textField.placeholder = "Name"
+			}
+			alert.addTextField {(textField: UITextField!) in
+				textField.placeholder = "Github"
 			}
 			present(alert, animated: true, completion: nil)
 		} else {

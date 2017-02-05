@@ -26,10 +26,11 @@ class FaceViewModel {
 		self.imageData = imageData
 	}
 
-	func enrollFace(name: String) {
+	func enrollFace(name: String, github: String) {
 		guard let imageData = imageData else { return }
 		let params: Parameters = [
 			"name": name,
+			"github": github,
 			"image": imageData.base64EncodedString()
 		]
 		
