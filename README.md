@@ -1,6 +1,5 @@
 # FaceDex
-PokeDex for people [IN DEVELOPMENT]
-
+PokéDex for people! Gotta tag em all!
 
 ## Inspiration
  Pokemon and being awkward developers.
