@@ -21,7 +21,7 @@ class PeopleViewController: UIViewController {
 	fileprivate var fetched: Bool
 
 	init(image: UIImage) {
-		let imageData = UIImagePNGRepresentation(image)
+		let imageData = UIImagePNGRepresentation(image.resizeWith(percentage: 0.3)!)
 		self.backgroundImage = image
 		fetched = false
 		super.init(nibName: nil, bundle: nil)
@@ -36,7 +36,7 @@ class PeopleViewController: UIViewController {
 		super.viewDidLoad()
 		view.backgroundColor = UIColor.gray
 
-		let backgroundImageView = UIImageView(frame: view.frame)
+		let backgroundImageView = UIImageView(frame: view.bounds)
 		backgroundImageView.image = backgroundImage
 
 		let cancelButton = UIButton(frame: CGRect(x: 10.0, y: 10.0, width: 30.0, height: 30.0))

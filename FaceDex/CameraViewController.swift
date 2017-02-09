@@ -31,7 +31,7 @@ class CameraViewController: SwiftyCamViewController, SwiftyCamViewControllerDele
 	}
 
 	func swiftyCam(_ swiftyCam: SwiftyCamViewController, didTake photo: UIImage) {
-		let newVC = PeopleViewController(image: photo.resizeWith(percentage: 0.3)!)
+		let newVC = PeopleViewController(image: photo)
 		self.present(newVC, animated: true, completion: nil)
 	}
 
